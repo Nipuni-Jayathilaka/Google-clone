@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onclick="document.querySelector('aside').style.visibility='hidden'">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,221 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
-        <a>Gmail</a>
-        <a>Images</a>
-        <a><svg  class="gb_Ue" focusable="false" viewBox="0 0 24 24"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg></a>
-        <a>Sign in</a>
+        <a href="https://mail.google.com/mail/?authuser=0&ogbl">Gmail</a>
+        <a href="https://www.google.lk/imghp?hl=en&authuser=0&ogbl">Images</a>
+        <a onclick="event.stopImmediatePropagation(); document.querySelector('aside').style.visibility='visible';"><svg
+                class="gb_Ue" focusable="false" viewBox="0 0 24 24">
+                <path
+                    d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                </path>
+            </svg></a>
+        <a
+            href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.lk/&ec=GAZAmgQ">Sign
+            in</a>
     </header>
-    
+    <main>
+        <section id="sec-logo">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                alt="Google Logo">
+        </section>
+        <form id="search-form" action="searchresult.html" method="GET">
+            <div id="form-input">
+                <svg id="ico-search" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                    </path>
+                </svg>
+                <input title="Search" type="text" name="q">
+                <div id="ico-mic"><svg title="Search by voice" class="goxjub" focusable="false" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#4285f4"
+                            d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z">
+                        </path>
+                        <path fill="#34a853" d="m11 18.08h2v3.92h-2z"></path>
+                        <path fill="#fbbc05"
+                            d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z">
+                        </path>
+                        <path fill="#ea4335"
+                            d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z">
+                        </path>
+                    </svg></div>
+            </div>
+            <div id="sec-buttons">
+                <button>Google Search</button>
+                <button type="button">I'm Feeling Lucky</button>
+            </div>
+        </form>
+        <section id="sec-lang">
+            Google offered in: <a
+                href="https://www.google.com/setprefs?sig=0_tBShOMAtET5laaUwq8BWUYL3HhU%3D&hl=si&source=homepage&sa=X&ved=0ahUKEwixqeyKqcP6AhUS3XMBHUXFAmEQ2ZgBCBA">සිංහල</a>
+            <a
+                href="https://www.google.com/setprefs?sig=0_tBShOMAtET5laaUwq8BWUYL3HhU%3D&hl=ta&source=homepage&sa=X&ved=0ahUKEwixqeyKqcP6AhUS3XMBHUXFAmEQ2ZgBCBE">தமிழ்</a>
+        </section>
+    </main>
+    <footer>
+        <section id="country">Sri Lanka</section>
+        <section id="nav-links">
+            <div>
+                <a
+                    href="https://about.google/?utm_source=google-LK&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a>
+                <a
+                    href="https://www.google.com/intl/en_lk/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+                <a
+                    href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
+                <a href="https://google.com/search/howsearchworks/?fg=1">How search works</a>
+            </div>
+            <div>
+                <a href="https://policies.google.com/privacy?hl=en-LK&fg=1">Privacy</a>
+                <a href="https://policies.google.com/terms?hl=en-LK&fg=1">Terms</a>
+                <a href="#">Settings</a>
+            </div>
+        </section>
+    </footer>
+    <aside onclick="event.stopImmediatePropagation();">
+        <ul>
+            <li class="icon-list">
+                <a class="list-nav" href="https://myaccount.google.com/?utm_source=OGB&amp;utm_medium=app">
+                    <div class="image-div"><span id="img1"></span></div>
+                    <span class="title">Account</span>
+                </a>
+            </li>
+            <li class="icon-list"><a class="list-nav" href="https://www.google.lk/webhp">
+                    <div class="image-div"><span id="img2"></span></div>
+                    <span class="title">Search</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://maps.google.lk/maps?hl=en">
+                    <div class="image-div"><span id="img3"></span></div>
+                    <span class="title">Maps</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://www.youtube.com/">
+                    <div class="image-div"><span id="img4"></span></div>
+                    <span class="title">YouTube</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://play.google.com/?hl=en">
+                    <div class="image-div"><span id="img5"></span></div>
+                    <span class="title">Play</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://news.google.com/">
+                    <div class="image-div"><span id="img6"></span></div>
+                    <span class="title">News</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://mail.google.com/mail/">
+                    <div class="image-div"><span id="img7"></span></div>
+                    <span class="title">Gmail</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://meet.google.com?hs=197">
+                    <div class="image-div"><span id="img8"></span></div>
+                    <span class="title">Meet</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://chat.google.com/">
+                    <div class="image-div"><span id="img9"></span></div>
+                    <span class="title">Chat</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://contacts.google.com/?hl=en">
+                    <div class="image-div"><span id="img10"></span></div>
+                    <span class="title">Contacts</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://drive.google.com/">
+                    <div class="image-div"> <span id="img11"></span></div>
+                    <span class="title">Drive</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://calendar.google.com/calendar">
+                    <div class="image-div"><span id="img12"></span></div>
+                    <span class="title">Calendar</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://translate.google.lk/?hl=en" me="hSRGPd">
+                    <div class="image-div"><span id="img13"></span></div>
+                    <span class="title">Translate</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://photos.google.com/?pageId=none">
+                    <div class="image-div" id="img14"></div>
+                    <span class="title">Photos</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://duo.google.com/?usp=duo_ald">
+                    <div class="image-div"><span id="img15"></span></div>
+                    <span class="title">Duo</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://www.google.lk/shopping?hl=en&amp;source=og">
+                    <div class="image-div"><span id="img16"></span></div>
+                    <span class="title">Shopping</span>
+                </a></li>
+        </ul>
+        <hr>
+        <ul>
+            <li class="icon-list"><a class="list-nav" href="https://www.google.com/finance" >
+                    <div class="image-div"><span id="img17"></span></div>
+                    <span class="title">Finance</span>
+                </a>
+            </li>
+            <li class="icon-list"><a class="list-nav" href="https://docs.google.com/document/?usp=docs_alc" >
+                    <div class="image-div"><span id="img18"></span></div><span
+                        class="title">Docs</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://docs.google.com/spreadsheets/?usp=sheets_alc">
+                    <div class="image-div"><span id="img19" ></span></div><span
+                        class="title">Sheets</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://docs.google.com/presentation/?usp=slides_alc">
+                    <div class="image-div"><span id="img20"></span></div><span
+                        class="title">Slides</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://books.google.lk/?hl=en">
+                    <div class="image-div"><span id="img21"></span></div><span
+                        class="title">Books</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://www.blogger.com/">
+                    <div class="image-div"><span id="img22"></span></div><span
+                        class="title">Blogger</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://hangouts.google.com/">
+                    <div class="image-div"><span id="img23"></span></div><span
+                        class="title">Hangouts</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://keep.google.com">
+                    <div class="image-div"><span id="img24"></span></div><span
+                        class="title">Keep</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://jamboard.google.com/?usp=jam_ald">
+                    <div class="image-div"><span id="img25"></span></div><span
+                        class="title">Jamboard</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://earth.google.com/web/">
+                    <div class="image-div"><span id="img26"></span></div><span
+                        class="title">Earth</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://www.google.lk/save">
+                    <div class="image-div"><span id="img27"></span></div><span
+                        class="title">Collections</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav"
+                    href="https://artsandculture.google.com/?hl=en&amp;utm_source=ogs.google.com&amp;utm_medium=referral">
+                    <div class="image-div"><span id="img28"></span></div><span
+                        class="title">Arts and Culture</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav"
+                    href="https://ads.google.com/home/?subid=ww-ww-xs-ip-awhc-a-ogb_cons!o2" >
+                    <div class="image-div"><span id="img29"></span></div><span
+                        class="title">Google Ads</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://podcasts.google.com/" >
+                    <div class="image-div"><span id="img30"></span></div><span
+                        class="title">Podcasts</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://www.google.com/travel/?dest_src=al" >
+                    <div class="image-div"><span id="img31"></span></div><span
+                        class="title">Travel</span>
+                </a></li>
+            <li class="icon-list"><a class="list-nav" href="https://docs.google.com/forms/?usp=forms_alc">
+                    <div class="image-div"><span id="img32"></span></div><span
+                        class="title">Forms</span>
+                </a></li>
+        </ul>
+        <div><a href=""><button>More from Google</button></a></div>
+        
+    </aside>
 </body>
+
 </html>
